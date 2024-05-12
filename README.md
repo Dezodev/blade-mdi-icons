@@ -47,25 +47,19 @@ php artisan vendor:publish --tag=blade-mdi-icons-config
 Icons can be used as self-closing Blade components which will be compiled to SVG icons:
 
 ```blade
-<x-heroicon-o-adjustments/>
+<x-mdi-antenna/>
 ```
 
 You can also pass classes to your icon components:
 
 ```blade
-<x-heroicon-o-adjustments class="w-6 h-6 text-gray-500"/>
+<x-mdi-antenna class="w-6 h-6 text-gray-500"/>
 ```
 
 And even use inline styles:
 
 ```blade
-<x-heroicon-o-adjustments style="color: #555"/>
-```
-
-The solid icons can be referenced like this:
-
-```blade
-<x-heroicon-s-adjustments/>
+<x-mdi-antenna style="color: #555"/>
 ```
 
 ### Raw SVG Icons
