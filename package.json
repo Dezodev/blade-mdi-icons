@@ -1,6 +1,6 @@
 {
   "private": true,
   "dependencies": {
-    "heroicons": "^1.0.1"
+    "@mdi/svg": "^7.4.47"
   }
 }
