@@ -2,7 +2,8 @@
 
 class UpdateIcons
 {
-    public function __construct() {
+    public function __construct()
+    {
         $this->log('-- Updating icons...');
 
         $this->remove_old_icons();
@@ -12,7 +13,8 @@ class UpdateIcons
         $this->log('-- Done.');
     }
 
-    private function remove_old_icons() {
+    private function remove_old_icons()
+    {
         $this->log('-- -- Removing old icons...');
 
         $icons = glob(__DIR__.'/../resources/svg/*.svg');
@@ -21,7 +23,8 @@ class UpdateIcons
         }
     }
 
-    private function copy_new_icons() {
+    private function copy_new_icons()
+    {
         $this->log('-- -- Copying new icons...');
 
         $icons = glob(__DIR__.'/../node_modules/@mdi/svg/svg/*.svg');
@@ -30,16 +33,17 @@ class UpdateIcons
         }
     }
 
-    private function adapt_new_icons() {
+    private function adapt_new_icons()
+    {
         $this->log('-- -- Adapt new icons...');
 
         $icons = glob(__DIR__.'/../resources/svg/*.svg');
         foreach ($icons as $icon) {
             // Get icon content
             $svgString = file_get_contents($icon);
-            
+
             // Parse icon content
-            $dom = new DOMDocument();
+            $dom = new DOMDocument;
             $dom->loadXML($svgString);
 
             // Get svg element
@@ -56,9 +60,10 @@ class UpdateIcons
         }
     }
 
-    private function log($message) {
+    private function log($message)
+    {
         echo $message.PHP_EOL;
     }
 }
 
-(new UpdateIcons());
+(new UpdateIcons);
